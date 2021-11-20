@@ -15,3 +15,15 @@ for (var i=0; i <= userInput; i++)
     numbers[i] = numbers[i];
   }
 }
+
+$(document).ready(function() {
+  $("form#input").submit(function(event){
+    const userInput =  parseInt($("#number").val());
+    event.preventDefault();
+    const result = looping(userInput)
+    $("input#number").val("");
+    $("#display").text(numbers);
+    $("#display").show();
+  });
+  numbers = []
+});

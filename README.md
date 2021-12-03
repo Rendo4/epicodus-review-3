@@ -18,8 +18,38 @@ _Hello and thank you for viewing my Magic of looping application! This project u
 | Input      | Output     | 
 | :---       |    :----:  |      
 | 3          | Beep, Boop, Won't you be my Neighbor?     | 
-| 5          | Beep, Boop, Won't you be my Neighbor?, 4, 5       | 
+| 5          | Beep, Boop, Won't you be my Neighbor?, 4, 5  |
 
+## TTD Specs
+_Describe: looping()
+
+Test: "It should return a warning 'field is required' if nothing is inputted"
+Code: looping(0);
+Expected Output: 'field is required'
+
+Test: "It should return Beep if 1 is entered"
+Code:  looping(1);
+Expected Output: beep
+
+Test: "It should return boop instead of 2 if 2 is entered"
+Code: looping(2);
+Expected Output: beep, boop
+
+Test: " It should return 'Won't you be my neighbor?' instead of 3 if 3 is entered"
+Code: looping(3);
+Expected Output: beep, boop, Won't you be my neightbor?
+
+Test: "It should return beep if the number contains a 1"
+Code: looping(11);
+Expected Output: beep, boop, Won't you be my neightbor?, 4, 5, 6, 7, 8, 9, beep, beep
+
+Test: "It should overide rules of 2 > 1 so if 12 is entered it should return boop"
+Code: looping(12)
+Expected Output: beep, boop, Won't you be my neightbor?, 4, 5, 6, 7, 8, 9, beep, beep, boop
+
+Test: "It should overide rules of 3 > 2 || 3>1 so if 32 || 13 is entered it should return 'Won't you be my neighbor"
+Code: looping(13)
+Expected Output: 0,beep,boop,Won't you be my neighbor?,4,5,6,7,8,9,beep,beep,boop,Won't you be my neighbor?,beep,beep,beep,beep,beep,beep,boop,boop,boop,Won't you be my neighbor?,boop,boop,boop,boop,boop,boop,Won't you be my neighbor?,Won't you be my neighbor?,Won't you be my neighbor?
 ## Setup/Installation Requirements
 
 * You can visit my github Rendo4 or you can copy this link to my repository https://github.com/Rendo4/epicodus-review-3 
